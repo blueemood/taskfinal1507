@@ -9,7 +9,7 @@ import { UserContext } from '../App'
 import io from "socket.io-client";
 import DeleteMember from './DeleteMember';
 
-const ENDPOINT = "http://localhost:5000"
+const ENDPOINT = "https://taskhive-hb9j.onrender.com"
 var socket, currentChat;
 
 const Messages = () => {
