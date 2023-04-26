@@ -26,3 +26,8 @@
     background-color: transparent !important;
     color: #7e8c8f;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+  }
+  

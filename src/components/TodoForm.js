@@ -380,7 +380,7 @@ const TodoForm = ({clickedTask}) => {
 
         {/* Alert Modal */}
 
-        <Modal size="sm" show={showAlert} onHide={handleAlertClose} backdrop="static" keyboard={false} aria-labelledby="example-modal-sizes-title-sm">
+        <Modal size="sm" className='my-modal' show={showAlert} onHide={handleAlertClose} backdrop="static" keyboard={false} aria-labelledby="example-modal-sizes-title-sm">
             <Modal.Header closeButton className='modalHeader'>
                 <Modal.Title id="example-modal-sizes-title-sm">{alertTitle}</Modal.Title>
             </Modal.Header>
@@ -388,7 +388,7 @@ const TodoForm = ({clickedTask}) => {
                 <p>{alertMessage}</p>
             </Modal.Body>
             <Modal.Footer className='modalFooter'>
-                <Button className='saveBtn' onClick={handleAlertClose}>Ok</Button> 
+                <Button className='saveBtn ' onClick={handleAlertClose}>Ok</Button> 
             </Modal.Footer>
         </Modal>
     </>

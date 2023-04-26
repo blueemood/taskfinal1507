@@ -8,7 +8,7 @@
     background-color: transparent;
     color: #314e52;
     border: 1px solid #dad9d7;
-    border-radius: 25px 10px 25px 10px !important;
+    border-radius: 10px 10px 10px 10px !important;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.63); 
     cursor: pointer;
     text-align: center;
@@ -23,7 +23,7 @@
 
 
 .modalBodyMsg{
-    background: #314e52;
+    background: whitesmoke;
     color: #314e52;
     border: 1px solid #dad9d7;
     border-top: none;
@@ -57,12 +57,13 @@
 }
 
 .msgtxt{
-    font-style: italic;
+    /* font-style: italic; */
     border: 1px solid #314e52;
-    border-radius: 25px 10px 25px 10px ;
+    color: whitesmoke;
+    border-radius: 10px 10px 10px 10px ;
     margin: 0%;
     padding: 7px 7px 7px 7px;
-    background-color: #314e52;
+    background-color: #a3a5a5;
 }
 
 
@@ -77,19 +78,19 @@
     background-color: #314e52;
     box-shadow: 0px 0px 10px 1px #314e52; 
     border: #314e52;
-    color: black;
+    color: rgb(255, 255, 255);
 }
   
 .refreshBtn:focus{
     background-color: #314e52;
     box-shadow: 0px 0px 10px 1px #314e52;
     border: #314e52;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .refreshIcon{
     padding-top: 5px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 

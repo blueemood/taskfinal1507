@@ -251,9 +251,9 @@ const Signup = () => {
                     </Row>
                     <br></br>
                     <Row>
-                        <Container className='headingCont'>
+                        {/* <Container className='headingCont'>
                             <p className='accountTxt'>See how it works <WatchVideo/></p>
-                        </Container>
+                        </Container> */}
                     </Row>
                 </Container>
 

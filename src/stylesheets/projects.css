@@ -3,19 +3,19 @@
 }
 
 .newProjectBtn{
-    background-color: #f0ae4e;
-    border: #f0ae4e;
-    border-radius: 25px 10px 25px 10px !important;
+    background-color: #314e52;
+    border: #314e52;
+    border-radius: 10px 10px 10px 10px !important;
     cursor: pointer;
     float: left;
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .newProjectBtn:hover{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
-    border: #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 2px 1px #ffffff; 
+    border: #314e52;
     
   }
 
@@ -23,7 +23,7 @@
     /* border-top: 1px solid #dad9d7;
     border-bottom: 1px solid #dad9d7; */
     border: 1px solid #dad9d7;
-    border-radius: 25px 10px 25px 10px ;
+    border-radius: 10px 10px 10px 10px ;
     width: 100%;
     margin-top: 10px;
 }
@@ -31,7 +31,7 @@
 .phaseListItem{
     /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
     background-color: transparent;
-    color:#dad9d7;
+    color:#314e52;
 }
 
 
@@ -46,65 +46,65 @@
 
 .addMembers{
     cursor: pointer;
-    background-color: #f0ae4e;
-    color: black;
+    background-color: #314e52;
+    color: rgb(255, 255, 255);
     float: right;
     width: 6rem;
-    border: 1px solid #f0ae4e;
-    border-radius: 25px 10px 25px 10px !important;
+    border: 1px solid #314e52;
+    border-radius: 10px 10px 10px 10px !important;
     text-align: center;
 }
 
 .addMembers:hover{
-    background-color: #f0ae4e;
-    color: black;
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 1px #314e52; 
+    border: 1px solid #314e52;
 }
   
 .addMembers:focus{
-    background-color: #f0ae4e;
-    color: black;
-    box-shadow: 0px 0px 10px 1px #f0ae4e;
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 1px #314e52;
+    border: 1px solid #314e52;
 }
 
 .addFriendIcon{
     cursor: pointer;
-    color: #f0ae4e;
+    color: #314e52;
     float: right;
     border-radius: 10px;
 }
 
 .addFriendIcon:hover{
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
+    box-shadow: 0px 0px 5px 1px #314e52; 
     
 }
 
 
 .phaseTrashBtn{
     cursor: pointer;
-    color: #f0ae4e;
+    color: #314e52;
     float: right;
 }
 
 .phaseEditBtn{
     cursor: pointer;
-    color: #f0ae4e;
+    color: #314e52;
     float: right;
 }
 
 .phaseTrashBtn:hover{
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
+    /* box-shadow: 0px 0px 10px 1px #314e52;  */
 }
 
 .phaseEditBtn:hover{
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
+    /* box-shadow: 0px 0px 10px 1px #314e52;  */
 }
 
 .membersList{
     background-color: transparent;
-    color: #dad9d7;
+    color: #314e52;
 }
 
 
@@ -117,7 +117,7 @@
 
 .filesList{
     border: 1px solid silver;
-    border-radius: 25px 10px 25px 10px !important;
+    border-radius: 10px 10px 10px 10px !important;
 }
 
 .singlefile{
@@ -127,66 +127,67 @@
 
 .changeDesig{
     cursor: pointer;
-    color: #f0ae4e;
+    color: #314e52;
     text-decoration:underline;
 }
 
 .changeDesig:hover{
-    color: #f19307;
+    color: #314e52;
 }
 
 .phaseBtn{
     cursor: pointer;
     margin-left: 40%;
     margin-right: 40%;
-    background-color: #f0ae4e;
-    color: black !important;
+    background-color: #314e52;
+    color: rgb(250, 247, 247) !important;
     width: 30%;
-    border: 1px solid #f0ae4e;
-    border-radius: 25px 10px 25px 10px !important;
+    border: 1px solid #314e52;
+    border-radius: 10px 10px 10px 10px !important;
 }
 
 
 .phaseBtn:hover{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 5px 1px #314e52; 
+    border: 1px solid #314e52;
 }
   
 .phaseBtn:focus{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e;
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 5px 1px #314e52;
+    border: 1px solid #314e52;
 }
 
 
 .saveBtnPhase{
     cursor: pointer;
     margin-left: 30%;
-    background-color: #f0ae4e;;
+    background-color: #314e52;;
     color: black !important;
     width: 40%;
-    border: 1px solid #f0ae4e;
-    border-radius: 25px 10px 25px 10px !important;
+    border: 1px solid #314e52;
+    border-radius: 10px 10px 10px 10px !important;
 
 }
 
 
 .saveBtnPhase:hover{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 5px 1px #314e52; 
+    border: 1px solid #314e52;
 }
   
 .saveBtnPhase:focus{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e;
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 5px 1px #314e52;
+    border: 1px solid #314e52;
 }
 
 .profileImages{
     border-radius: 50%;
     width: 5rem;
+    /* border-color: #314e52; */
 }
 
 
@@ -206,43 +207,43 @@
 
 .projectSubmitBtn{
     cursor: pointer;
-    background-color: #f0ae4e;;
-    color: black !important;
-    border: 1px solid #f0ae4e;
-    border-radius: 25px 10px 25px 10px !important;
+    background-color: #314e52;;
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid #314e52;
+    border-radius: 10px 10px 10px 10px !important;
 }
 
 .projectSubmitBtn:hover{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 5px 1px #314e52; 
+    border: 1px solid #314e52;
 }
   
 .projectSubmitBtn:focus{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e;
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 10px 1px #314e52;
+    border: 1px solid #314e52;
 }
 
 .searchBtn{
     cursor: pointer;
-    background-color: #f0ae4e;;
-    color: black !important;
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;;
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid #314e52;
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 25px;
+    border-bottom-right-radius: 10px;
 }
 
 .searchBtn:hover{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e; 
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 5px 1px #314e52; 
+    border: 1px solid #314e52;
 }
   
 .searchBtn:focus{
-    background-color: #f0ae4e;
-    box-shadow: 0px 0px 10px 1px #f0ae4e;
-    border: 1px solid #f0ae4e;
+    background-color: #314e52;
+    box-shadow: 0px 0px 5px 1px #314e52;
+    border: 1px solid #314e52;
 }
 
 

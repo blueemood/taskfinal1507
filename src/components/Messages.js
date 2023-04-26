@@ -201,6 +201,7 @@ const Messages = () => {
            
             setSenderChatId(data.newMessage.ChatId)
             socket.emit("sendingMessage", data)
+            setTxtInput("");
 
         } catch (error) {
             console.log(error)
