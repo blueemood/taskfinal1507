@@ -1,0 +1,122 @@
+
+.submitBtn{
+  /* border: 2px solid red !important; */
+  background-color: #314e52;
+  border: #314e52;
+  margin-left: 45%;
+  margin-right: 50%;
+  color: rgb(252, 252, 252);
+}
+
+.submitBtn:hover{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52; 
+  color: black;
+}
+
+.submitBtn:focus{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52;
+  border: #314e52;
+  color: black;
+}
+
+
+.updateBtn{
+  background-color: #314e52;
+  border: #314e52;
+  width: 100%;
+  color: rgb(255, 253, 253) ;
+}
+
+
+.updateBtn:hover{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52; 
+  color: black ;
+}
+
+.updateBtn:focus{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52;
+  border: #314e52;
+  color: black ;
+}
+
+.addCatBadge{
+  cursor: pointer;
+  float: right;
+  background-color: #314e52;
+  border: #314e52;
+  margin-top: -8px;
+  color: rgb(255, 255, 255);
+}
+
+
+.addCatBadge:hover{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52; 
+  border: #314e52;
+  color: rgb(0, 0, 0);
+}
+
+.addCatBadge:focus{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52;
+  border: #314e52;
+  color: black;
+}
+
+.categoryBtn{
+  background-color: #314e52;
+  border: #314e52;
+  color: black;
+}
+
+.categoryBtn:hover{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52; 
+  border: #314e52;
+  color: black;
+}
+
+.categoryBtn:focus{
+  background-color: #314e52;
+  box-shadow: 0px 0px 10px 1px #314e52;
+  border: #314e52;
+  color: black;
+}
+
+
+
+.trashBtn{
+  color: #314e52 !important;
+  float: right !important;
+  cursor: pointer;
+
+}
+
+.trashBtn:hover{
+  box-shadow: 0px 0px 10px 1px #314e52;
+}
+
+
+.formInput{
+  background-color: transparent;
+  color: #314e52;
+  border-radius: 10px 10px 10px 10px ;
+}
+
+
+.formInput:focus{
+  background-color: transparent;
+  border-radius: 10px 10px 10px 10px ;
+  box-shadow: 0px 0px 10px 1px #000000;
+  border: #314e52;
+  color: #314e52;
+}
+
+.listOption{
+  background-color: #dad9d7 !important;
+  color: #314e52;
+}

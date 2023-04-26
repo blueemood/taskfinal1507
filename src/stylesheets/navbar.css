@@ -1,0 +1,42 @@
+.navbarMain{
+    border-radius:25px;
+    /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+    background: #314e52;
+    /* box-shadow: 0px 0px 5px 1px #e6e6e6;  */
+    width: 98%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px ;
+    /* box-shadow: 0px 0px 10px 1px #000000;  */
+    /* #dad9d7 */
+}
+
+.toggleBtn1{
+    color: #e6e6e6 !important;
+    border: 1px solid #e6e6e6 !important;
+}
+
+
+.navItems{
+    margin: auto;
+}
+
+
+.navList{
+    background-color: transparent;
+    color: #e6e6e6 !important;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+}
+
+.navList:hover{
+    box-shadow: 0px 0px 2px 1px #e6e6e6; 
+    border-radius: 10px 10px 10px 10px ;
+}
+
+.title{
+    font-weight:bold;
+    padding: 10px 10px 10px 10px;
+    color: #e6e6e6 !important;
+}
