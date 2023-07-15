@@ -84,9 +84,14 @@ const Projects = ({props}) => {
         console.log(projectFiles)
         if(projectPhases.length > 0 && projectDetails.projectTitle && projectDetails.startDate &&  projectDetails.dueDate && projectDetails.projectDiscription && projectDetails.projectType){
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/createNewProject', {
                     method: "POST",
-                    body: formData
+                    body: formData,
+                    headers: {
+                        Authorization: `Bearer ${tok}`,
+                      },
                       
                 });
 
@@ -127,8 +132,13 @@ const Projects = ({props}) => {
 
     const getFriends = async () =>{
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/getFriends', {
                 method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${tok}`,
+                  },
             })
 
             const data = await response.json();

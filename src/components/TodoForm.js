@@ -22,8 +22,13 @@ const TodoForm = ({clickedTask}) => {
 
     const showCategories = async () =>{
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/showCategories', {
                 method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${tok}`,
+                  },
             });
     
             const data = await response.json();
@@ -54,9 +59,12 @@ const TodoForm = ({clickedTask}) => {
             category: category.value
         }
 
+        const userProfile = JSON.parse(localStorage.getItem('User'));
+        const tok = userProfile.tok;
         const response = await fetch('https://taskhive-backend-testing.onrender.com/addNewTask', {
             method: 'POST',
             headers: {
+                Authorization: `Bearer ${tok}`,
                 'Content-Type' : 'application/json'
             },
             body: JSON.stringify(details),
@@ -93,9 +101,12 @@ const TodoForm = ({clickedTask}) => {
             id: taskForUpdate._id
         }
 
+        const userProfile = JSON.parse(localStorage.getItem('User'));
+        const tok = userProfile.tok;
         const response = await fetch('https://taskhive-backend-testing.onrender.com/updatingTask', {
             method: 'POST',
             headers: {
+                Authorization: `Bearer ${tok}`,
                 'Content-Type' : 'application/json'
             },
             body: JSON.stringify(details),
@@ -136,9 +147,12 @@ const TodoForm = ({clickedTask}) => {
         }
         
     
+        const userProfile = JSON.parse(localStorage.getItem('User'));
+        const tok = userProfile.tok;
         const response = await fetch('https://taskhive-backend-testing.onrender.com/alltaskCategories', { 
             method: 'POST',
             headers: {
+                Authorization: `Bearer ${tok}`,
                 'Content-Type' : 'application/json' 
             },
             body: JSON.stringify(newcategory),
@@ -166,9 +180,12 @@ const TodoForm = ({clickedTask}) => {
         console.log(catId)
         
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/deletingCategory', {
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json'
                 },
                 body: JSON.stringify({catId}),
@@ -190,9 +207,12 @@ const TodoForm = ({clickedTask}) => {
     const handleDeleteTask = async (e) =>{
         let taskId = e.target.id;
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/deletingselectedTask', {
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json'
                 },
                 body: JSON.stringify({taskId}),

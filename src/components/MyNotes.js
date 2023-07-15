@@ -22,8 +22,13 @@ const MyNotes = () => {
 
     const getNotes = async () =>{
       try {
+        const userProfile = JSON.parse(localStorage.getItem('User'));
+        const tok = userProfile.tok;
           const response = await fetch('https://taskhive-backend-testing.onrender.com/getallNotes', {
               method: 'GET',
+              headers: {
+                Authorization: `Bearer ${tok}`,
+              },
           })
 
           const data = await response.json();

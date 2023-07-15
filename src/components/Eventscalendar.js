@@ -18,8 +18,13 @@ const Eventscalendar = () => {
 
     const showTasks = async () =>{
         try {
+          const userProfile = JSON.parse(localStorage.getItem('User'));
+          const tok = userProfile.tok;
           const response = await fetch('https://taskhive-backend-testing.onrender.com/showTasks', {
             method: 'GET',
+            headers: {
+              Authorization: `Bearer ${tok}`,
+            },
         });
   
         const data = await response.json();
@@ -35,8 +40,13 @@ const Eventscalendar = () => {
 
   const showProjects = async () =>{
     try {
+      const userProfile = JSON.parse(localStorage.getItem('User'));
+      const tok = userProfile.tok;
       const response = await fetch('https://taskhive-backend-testing.onrender.com/getProjects', {
         method: 'GET',
+        headers: {
+          Authorization: `Bearer ${tok}`,
+        },
     });
 
     const data = await response.json();

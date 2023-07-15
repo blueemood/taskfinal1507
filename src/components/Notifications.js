@@ -21,8 +21,13 @@ const Notifications = () => {
 
     const requestSentBYMe = async () =>{
       try {
+        const userProfile = JSON.parse(localStorage.getItem('User'));
+        const tok = userProfile.tok;
           const response = await fetch('https://taskhive-backend-testing.onrender.com/requestSentBYMe', { 
               method: 'GET',
+              headers: {
+                Authorization: `Bearer ${tok}`,
+              },
           })
 
           const data = await response.json();
@@ -38,8 +43,13 @@ const Notifications = () => {
 
     const getRequest = async () =>{
         try {
+          const userProfile = JSON.parse(localStorage.getItem('User'));
+          const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/getRequest', { 
                 method: 'GET',
+                headers: {
+                  Authorization: `Bearer ${tok}`,
+                },
             })
 
             const data = await response.json();
@@ -61,9 +71,12 @@ const Notifications = () => {
     const handleAcceptBtn = async (e) =>{
         let personId = e.target.id;
         try {
+          const userProfile = JSON.parse(localStorage.getItem('User'));
+          const tok = userProfile.tok;
           const response = await fetch('https://taskhive-backend-testing.onrender.com/acceptRequest', {
             method: 'POST',
             headers: {
+              Authorization: `Bearer ${tok}`,
                 'Content-Type' : 'application/json' 
             },
             body: JSON.stringify({personId}),
@@ -90,9 +103,12 @@ const Notifications = () => {
     const handleCancelRequest = async (e) =>{
       let personId = e.target.id;
       try {
+        const userProfile = JSON.parse(localStorage.getItem('User'));
+        const tok = userProfile.tok;
         const response = await fetch('https://taskhive-backend-testing.onrender.com/cancelRequest', {
           method: 'POST',
           headers: {
+              Authorization: `Bearer ${tok}`,
               'Content-Type' : 'application/json' 
           },
           body: JSON.stringify({personId}),

@@ -44,8 +44,13 @@ const Messages = () => {
 
     const getAllChats = async () =>{
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/allGroupChats', {
                 method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${tok}`,
+                  },
             })
 
             const data = await response.json();
@@ -62,8 +67,13 @@ const Messages = () => {
 
     const getFriends = async () =>{
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/getFriends', {
                 method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${tok}`,
+                  },
             })
 
             const data = await response.json();
@@ -101,9 +111,12 @@ const Messages = () => {
         setSmShowGroup(true);
 
         try { 
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/getAllGroupMsgs', {  
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json' 
                 },
                 body: JSON.stringify({selectedId}),
@@ -134,9 +147,12 @@ const Messages = () => {
         setSmShow(true);
 
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/getAllMsgs', {  
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json' 
                 },
                 body: JSON.stringify({selectedId}),
@@ -164,9 +180,12 @@ const Messages = () => {
     const handleKeyDown = async (e) =>{
         if(e.keyCode === 13 && selectedId){
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/sendingMsg', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedId, txtInput}),
@@ -188,9 +207,12 @@ const Messages = () => {
     const handleSendBtn = async () =>{
 
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/sendingMsg', {
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json' 
                 },
                 body: JSON.stringify({selectedId, txtInput}),
@@ -212,9 +234,12 @@ const Messages = () => {
     const handleKeyDownGroup = async (e) =>{
         if(e.keyCode === 13 && selectedId){
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/sendingGroupMsg', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedId, txtInput}),
@@ -235,9 +260,12 @@ const Messages = () => {
 
     const handleSendGroupBtn = async () =>{
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/sendingGroupMsg', {
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json' 
                 },
                 body: JSON.stringify({selectedId, txtInput}),

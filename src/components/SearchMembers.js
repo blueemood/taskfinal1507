@@ -21,8 +21,13 @@ const SearchMembers = ({props}) => {
     
     const getFriends = async () =>{
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/getFriends', {
                 method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${tok}`,
+                  },
             })
 
             const data = await response.json();
@@ -51,9 +56,12 @@ const SearchMembers = ({props}) => {
         if(e.keyCode === 13 && searchInput){
 
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/searchBar', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({searchInput}),
@@ -80,9 +88,12 @@ const SearchMembers = ({props}) => {
     const handleSearchBtn = async () =>{
         
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/searchBar', {
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json' 
                 },
                 body: JSON.stringify({searchInput}),
@@ -130,9 +141,12 @@ const SearchMembers = ({props}) => {
         let personId = e.target.id;        
        
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/sendingRequest', {
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json' 
                 }, 
                 body: JSON.stringify({personId}),

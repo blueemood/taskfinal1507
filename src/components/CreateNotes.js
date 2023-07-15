@@ -17,9 +17,12 @@ const CreateNotes = ({props}) => {
         e.preventDefault();
         if(noteTitle && noteText){
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/addNewnote', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({noteTitle, noteText}),

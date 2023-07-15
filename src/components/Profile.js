@@ -14,8 +14,13 @@ const Profile = () => {
     const handleSignOut = async () =>{
 
         try{
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/userSignOut', {
                 method: "GET",
+                headers: {
+                    Authorization: `Bearer ${tok}`,
+                  },
             });
             let data = await response.json();
 

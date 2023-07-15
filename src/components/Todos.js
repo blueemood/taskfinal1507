@@ -25,12 +25,7 @@ const SideNavbar = () => {
   const showTasks = async () => {
     try {
       const userProfile = JSON.parse(localStorage.getItem('User'));
-
-      // Access the tok value from the userProfile
       const tok = userProfile.tok;
-      
-      // Use the tok value as needed in your frontend code
-      console.log(tok); // Example usage
       const response = await fetch('https://taskhive-backend-testing.onrender.com/showTasks', {
         method: 'GET',
         headers: {

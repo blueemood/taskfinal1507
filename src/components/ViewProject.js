@@ -29,9 +29,12 @@ const ViewProject = ({projectData}) => {
                 let selectedProjectId = projectData._id;
                 let selectedProjectCreator = projectData.projectCreator;
 
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/showProjectPhases', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedProjectId, selectedProjectCreator}),
@@ -95,9 +98,12 @@ const ViewProject = ({projectData}) => {
     const handleCompletedPhases = async (e) =>{
         let selectedProjectId = e.target.id;
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch('https://taskhive-backend-testing.onrender.com/phaseCompletedNotification', {
                 method: 'POST',
                 headers: {
+                    Authorization: `Bearer ${tok}`,
                     'Content-Type' : 'application/json' 
                 },
                 body: JSON.stringify({selectedProjectId, selectedPhase}),
@@ -123,6 +129,8 @@ const ViewProject = ({projectData}) => {
         console.log(fileId)
         let x = document.getElementById("2abc")
         try {
+            const userProfile = JSON.parse(localStorage.getItem('User'));
+            const tok = userProfile.tok;
             const response = await fetch(`https://taskhive-backend-testing.onrender.com/downloadFile/${fileId}`);
 
             const file = await response.blob();

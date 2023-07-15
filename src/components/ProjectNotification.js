@@ -18,9 +18,12 @@ const ProjectNotification = ({projectData}) => {
         if(projectData){
             let selectedProjectId = projectData._id;
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/getProjectNotifications', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedProjectId}),
@@ -44,9 +47,12 @@ const ProjectNotification = ({projectData}) => {
         if(projectData){
             let selectedProjectId = projectData._id;
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/deleteProjectNotifications', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedProjectId}),

@@ -108,10 +108,13 @@ const AssignPhases = ({projectData}) => {
     const handleAssignPhases = async (e) =>{
         let projectId = e.target.id;
         try {
-            const response = await fetch('https://taskhive-backend-testing.onrender.com/assignProjectPhases', {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/assignProjectPhases', {
                 method: 'POST',
                 headers: {
-                    'Content-Type' : 'application/json' 
+                    'Content-Type' : 'application/json',
+                    Authorization: `Bearer ${tok}` 
                 },
                 body: JSON.stringify({assignEachPhase, projectId}),
             })
@@ -137,9 +140,12 @@ const AssignPhases = ({projectData}) => {
                 let selectedProjectId = projectData.currentProject._id;
                 let selectedProjectCreator = projectData.currentProject.projectCreator;
 
-                const response = await fetch('https://taskhive-backend-testing.onrender.com/showProjectPhases', {
+                    const userProfile = JSON.parse(localStorage.getItem('User'));
+                    const tok = userProfile.tok;
+                    const response = await fetch('https://taskhive-backend-testing.onrender.com/showProjectPhases', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedProjectId, selectedProjectCreator}),
@@ -184,9 +190,12 @@ const AssignPhases = ({projectData}) => {
     const handleUpdatePhaseBtn = async () =>{
         if(selectedphaseForUpdate){
             try {
-                const response = await fetch('https://taskhive-backend-testing.onrender.com/updatePhaseToCompleted', {
+                      const userProfile = JSON.parse(localStorage.getItem('User'));
+      const tok = userProfile.tok;
+      const response = await fetch('https://taskhive-backend-testing.onrender.com/updatePhaseToCompleted', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedphaseForUpdate}),
@@ -210,9 +219,12 @@ const AssignPhases = ({projectData}) => {
 
         if(selectedphaseForUpdate){
             try {
+                const userProfile = JSON.parse(localStorage.getItem('User'));
+                const tok = userProfile.tok;
                 const response = await fetch('https://taskhive-backend-testing.onrender.com/updatePhaseToPending', {
                     method: 'POST',
                     headers: {
+                        Authorization: `Bearer ${tok}`,
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({selectedphaseForUpdate}),
