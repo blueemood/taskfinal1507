@@ -22,7 +22,7 @@ const MyNotes = () => {
 
     const getNotes = async () =>{
       try {
-          const response = await fetch('/getallNotes', {
+          const response = await fetch('https://taskhive-backend-testing.onrender.com/getallNotes', {
               method: 'GET',
           })
 

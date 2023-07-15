@@ -18,7 +18,7 @@ const Eventscalendar = () => {
 
     const showTasks = async () =>{
         try {
-          const response = await fetch('/showTasks', {
+          const response = await fetch('https://taskhive-backend-testing.onrender.com/showTasks', {
             method: 'GET',
         });
   
@@ -35,7 +35,7 @@ const Eventscalendar = () => {
 
   const showProjects = async () =>{
     try {
-      const response = await fetch('/getProjects', {
+      const response = await fetch('https://taskhive-backend-testing.onrender.com/getProjects', {
         method: 'GET',
     });
 

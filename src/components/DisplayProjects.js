@@ -42,7 +42,7 @@ const DisplayProjects = (props) => {
 
     const getFriends = async () =>{
         try {
-            const response = await fetch('/getFriends', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/getFriends', {
                 method: 'GET',
             })
 
@@ -59,7 +59,7 @@ const DisplayProjects = (props) => {
 
     const showAssignedProjects = async () =>{
         try {
-          const response = await fetch('/getAssignedProjects', {
+          const response = await fetch('https://taskhive-backend-testing.onrender.com/getAssignedProjects', {
             method: 'GET',
         });
     
@@ -77,7 +77,7 @@ const DisplayProjects = (props) => {
 
     const showProjects = async () =>{
         try {
-          const response = await fetch('/getProjects', {
+          const response = await fetch('https://taskhive-backend-testing.onrender.com/getProjects', {
             method: 'GET',
         });
     

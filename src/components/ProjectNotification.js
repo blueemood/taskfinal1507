@@ -18,7 +18,7 @@ const ProjectNotification = ({projectData}) => {
         if(projectData){
             let selectedProjectId = projectData._id;
             try {
-                const response = await fetch('/getProjectNotifications', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/getProjectNotifications', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -44,7 +44,7 @@ const ProjectNotification = ({projectData}) => {
         if(projectData){
             let selectedProjectId = projectData._id;
             try {
-                const response = await fetch('/deleteProjectNotifications', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/deleteProjectNotifications', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 

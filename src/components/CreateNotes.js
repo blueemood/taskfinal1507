@@ -17,7 +17,7 @@ const CreateNotes = ({props}) => {
         e.preventDefault();
         if(noteTitle && noteText){
             try {
-                const response = await fetch('/addNewnote', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/addNewnote', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 

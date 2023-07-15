@@ -21,7 +21,7 @@ const SearchMembers = ({props}) => {
     
     const getFriends = async () =>{
         try {
-            const response = await fetch('/getFriends', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/getFriends', {
                 method: 'GET',
             })
 
@@ -51,7 +51,7 @@ const SearchMembers = ({props}) => {
         if(e.keyCode === 13 && searchInput){
 
             try {
-                const response = await fetch('/searchBar', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/searchBar', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -80,7 +80,7 @@ const SearchMembers = ({props}) => {
     const handleSearchBtn = async () =>{
         
         try {
-            const response = await fetch('/searchBar', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/searchBar', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 
@@ -130,7 +130,7 @@ const SearchMembers = ({props}) => {
         let personId = e.target.id;        
        
         try {
-            const response = await fetch('/sendingRequest', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/sendingRequest', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 

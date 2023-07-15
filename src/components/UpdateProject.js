@@ -60,7 +60,7 @@ const UpdateProject = ({projectData}) => {
 
     const getFriends = async () =>{
         try {
-            const response = await fetch('/getFriends', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/getFriends', {
                 method: 'GET',
             })
 
@@ -282,7 +282,7 @@ const UpdateProject = ({projectData}) => {
 
         if(updateProjectPhases.length > 0){
             try {
-                const response = await fetch("/updatingProject", {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/updatingProject', {
                     method: "POST",
                     body: formData
                       

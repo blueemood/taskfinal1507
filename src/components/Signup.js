@@ -49,7 +49,7 @@ const Signup = () => {
         const jwtIDToken = response.credential;
 
         try{
-            const res = await fetch("/googleSignIn", { 
+            const res = await fetch('https://taskhive-backend-testing.onrender.com/googleSignIn', { 
                 method: "POST",
                 headers:{
                     "Content-Type" : "application/json"                
@@ -75,7 +75,7 @@ const Signup = () => {
     useEffect( () => {
         /*global google*/
         google.accounts.id.initialize({
-            client_id: "71679309628-pt4a93103j2iiiorhcqhkq9thcua5vvl.apps.googleusercontent.com",
+            client_id: "564873804785-l5h8sv9j4kqgrsldpfgcdqarmkqqm75n.apps.googleusercontent.com",
             callback: handleResponce
         });
 
@@ -94,14 +94,14 @@ const Signup = () => {
 
         if(userEmail && userPassword){
             try {
-                const response = await fetch('/signInUser', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/signInUser', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
                     },
                     body: JSON.stringify({userEmail, userPassword}),
                 });
-    
+                console.log(response.cookie);
                 const data = await response.json();
 
                 if(response.status === 201 && data){
@@ -155,7 +155,7 @@ const Signup = () => {
             formData.append('userImage', userImage);
             
             try {
-                const response = await fetch("/createNewUser", {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/createNewUser', {
                     method: "POST",
                     body: formData
                       

@@ -29,7 +29,7 @@ const ViewProject = ({projectData}) => {
                 let selectedProjectId = projectData._id;
                 let selectedProjectCreator = projectData.projectCreator;
 
-                const response = await fetch('/showProjectPhases', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/showProjectPhases', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -95,7 +95,7 @@ const ViewProject = ({projectData}) => {
     const handleCompletedPhases = async (e) =>{
         let selectedProjectId = e.target.id;
         try {
-            const response = await fetch('/phaseCompletedNotification', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/phaseCompletedNotification', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 
@@ -123,7 +123,7 @@ const ViewProject = ({projectData}) => {
         console.log(fileId)
         let x = document.getElementById("2abc")
         try {
-            const response = await fetch(`/downloadFile/${fileId}`);
+            const response = await fetch(`https://taskhive-backend-testing.onrender.com/downloadFile/${fileId}`);
 
             const file = await response.blob();
             const url = window.URL.createObjectURL(file);

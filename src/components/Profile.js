@@ -14,7 +14,7 @@ const Profile = () => {
     const handleSignOut = async () =>{
 
         try{
-            const response = await fetch("/userSignOut", {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/userSignOut', {
                 method: "GET",
             });
             let data = await response.json();

@@ -33,7 +33,7 @@ const UpdateNotes = ({noteData}) => {
         e.preventDefault();
         if(noteTitle && noteText){
             try {
-                const response = await fetch('/updateCurrentNote', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/updateCurrentNote', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 

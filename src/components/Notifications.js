@@ -21,7 +21,7 @@ const Notifications = () => {
 
     const requestSentBYMe = async () =>{
       try {
-          const response = await fetch('/requestSentBYMe', { 
+          const response = await fetch('https://taskhive-backend-testing.onrender.com/requestSentBYMe', { 
               method: 'GET',
           })
 
@@ -38,7 +38,7 @@ const Notifications = () => {
 
     const getRequest = async () =>{
         try {
-            const response = await fetch('/getRequest', { 
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/getRequest', { 
                 method: 'GET',
             })
 
@@ -61,7 +61,7 @@ const Notifications = () => {
     const handleAcceptBtn = async (e) =>{
         let personId = e.target.id;
         try {
-          const response = await fetch('/acceptRequest', {
+          const response = await fetch('https://taskhive-backend-testing.onrender.com/acceptRequest', {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json' 
@@ -90,7 +90,7 @@ const Notifications = () => {
     const handleCancelRequest = async (e) =>{
       let personId = e.target.id;
       try {
-        const response = await fetch('/cancelRequest', {
+        const response = await fetch('https://taskhive-backend-testing.onrender.com/cancelRequest', {
           method: 'POST',
           headers: {
               'Content-Type' : 'application/json' 

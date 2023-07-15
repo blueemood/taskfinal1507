@@ -29,7 +29,7 @@ const DeleteNote = ({noteData}) => {
 
         if(alertTitle && noteId){
             try {
-                const response = await fetch('/deleteCurrentNote', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/deleteCurrentNote', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
