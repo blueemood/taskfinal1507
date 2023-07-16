@@ -19,6 +19,11 @@ const Home = () => {
         ?
         <Container  className='background ' fluid>
           <MainNavbar />
+          <div className='bgg'>
+          <h3>Welcome to TaskHive</h3>
+          <p className='bgtext'>The ultimate solution for project management! With our powerful tool,
+           you can easily organize tasks, track progress, and collaborate with your team through our integrated chat option.
+            Stay on top of your projects and achieve your goals with our intuitive platform.</p></div>
         </Container>
         :
         <Container className='background2 ' fluid>
