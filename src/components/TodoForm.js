@@ -220,6 +220,7 @@ const TodoForm = ({clickedTask}) => {
     
             let data = await response.json();
             if(response.status === 201 && data){
+                console.log(data);
                 setAlertTitle("Alert")
                 setAlertMessage(data.message);
                 setShowAlert(true);

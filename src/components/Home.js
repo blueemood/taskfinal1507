@@ -21,9 +21,8 @@ const Home = () => {
           <MainNavbar />
           <div className='bgg'>
           <h3>Welcome to TaskHive</h3>
-          <p className='bgtext'>The ultimate solution for project management! With our powerful tool,
-           you can easily organize tasks, track progress, and collaborate with your team through our integrated chat option.
-            Stay on top of your projects and achieve your goals with our intuitive platform.</p></div>
+          <p className='bgtext'>TaskHive is a cutting-edge task and project management website designed to streamline your workflow and boost productivity. With its intuitive interface and robust features, TaskHive empowers individuals and teams to effortlessly organize, prioritize, and track tasks, ensuring deadlines are met and projects are completed with efficiency and precision.</p>
+            </div>
         </Container>
         :
         <Container className='background2 ' fluid>
